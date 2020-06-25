@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <nav class="navbar navbar-light bg-light">                                                                 
+            <a class="navbar-brand" href="#">xfps-screenshare</a>           
+        </nav>                                                                                                     
+<div class="container-sm">
+    <div class="row">
+        <div class="col md-6">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %} 
+            {% endwith %}
+            <h1>watch stream</h1>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.session_id.label(class="form-control-label") }}
+                    {{ form.session_id(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.submit(class="form-control") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
