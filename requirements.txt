@@ -14,7 +14,7 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 mss==5.1.0
 parso==0.7.0
-Pillow==7.1.2
+Pillow==9.3.0
 pylint==2.5.3
 pyscreenshot==2.2
 six==1.15.0
